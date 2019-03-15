@@ -32,12 +32,12 @@
     <distributionManagement>
 	<repository>
             <id>Ericsson</id>
-            <name>demoproj</name>
+            <name>Ericsson</name>
             <url>http://172.29.240.236:8081/repository/Ericsson/</url>
         </repository>
         <snapshotRepository>
             <id>Ericsson-snap</id>
-            <name>demoproj-snap</name>
+            <name>Ericsson-snap</name>
             <url>http://172.29.240.236:8081/repository/Ericsson-snap/</url>
         </snapshotRepository>        
     </distributionManagement>
