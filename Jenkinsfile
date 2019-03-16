@@ -4,16 +4,10 @@ pipeline {
 	    maven 'maven'
 	}
 	stages {
-
-	   stage ('compile stage') {
-	    steps {
-		sh 'mvn clean'
-		}   
-	   }
-	   
-	   stage ('package stage') {
+   
+	   stage ('clean stage') {
             steps {
-		sh 'mvn package'
+		sh 'mvn clean'
                 }
            }
 	   
@@ -22,7 +16,11 @@ pipeline {
                 sh 'mvn install'
                 }
            }
-
+	   stage ('package stage') {
+            steps {
+                sh 'mvn package'
+                }
+           }
 	   stage ('deployment stage') {
             steps {
                 sh 'mvn deploy'
