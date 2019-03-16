@@ -4,7 +4,18 @@ pipeline {
 	    maven 'maven'
 	}
 	stages {
-   
+		
+           stage ('validate stage') {
+            steps {
+                sh 'mvn validate'
+                }
+           }
+	   stage ('compile stage') {
+            steps {
+                sh 'mvn compile'
+                }
+           }
+		
 	   stage ('clean stage') {
             steps {
 		sh 'mvn clean'
