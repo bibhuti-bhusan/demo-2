@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>ERICSSON</groupId>
     <artifactId>DEMO</artifactId>
-    <version>1.0</version>
+    <version>1.0.0</version>
     <packaging>war</packaging>
     <name>Demoproj</name>
     <properties>
@@ -30,16 +30,14 @@
         </developer>
     </developers>
     <distributionManagement>
-	<repository>
-            <id>Ericsson</id>
-            <name>Ericsson</name>
-            <url>http://172.29.240.236:8081/repository/Ericsson/</url>
-        </repository>
-        <snapshotRepository>
-            <id>Ericsson-snap</id>
-            <name>Ericsson-snap</name>
-            <url>http://172.29.240.236:8081/repository/Ericsson-snap/</url>
-        </snapshotRepository>        
+    <snapshotRepository>
+      <id>nexus-snapshots</id>
+      <url>http://35.229.70.178:8081/repository/Ericsson-snapshots/</url>
+    </snapshotRepository>
+    <repository>
+      <id>nexus-releases</id>
+      <url>http://35.229.70.178:8081/repository/Ericsson-releases/</url>
+    </repository>       
     </distributionManagement>
     <build>
     	<finalName>Demoproj</finalName>
