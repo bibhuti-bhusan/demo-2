@@ -39,7 +39,7 @@ pipeline {
            }
 	   stage ('deployment-to-tomcat') {
             steps {
-		copyArtifacts filter: '**/*.war', fingerprintArtifacts: true, projectName: 'pipe-line-project', selector: latestSavedBuild(), target: '/opt/apache-tomcat/webapps/'	
+		sh 'cp target/*.war /opt/apache-tomcat/webapps/'	
 	    }
             }
            }
