@@ -32,12 +32,10 @@
     <distributionManagement>
     <snapshotRepository>
       <id>nexus-snapshots</id>
-      <name>Internal Snapshots</name>
       <url>http://172.29.240.236:8081/repository/Ericsson-snapshots/</url>
     </snapshotRepository>
     <repository>
       <id>nexus-releases</id>
-      <name>Internal Releases</name>
       <url>http://172.29.240.236:8081/repository/Ericsson-releases/</url>
     </repository>       
     </distributionManagement>
