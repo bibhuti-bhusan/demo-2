@@ -36,7 +36,7 @@
     </snapshotRepository>
     <repository>
       <id>nexus-releases</id>
-      <url>http://172.29.240.236:8081/repository/Ericsson-releases/</url>
+      <url>http://172.29.240.236:8081/repository/maven-proxy-test/</url>
     </repository>       
     </distributionManagement>
     <build>
