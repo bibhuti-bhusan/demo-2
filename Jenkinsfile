@@ -39,8 +39,8 @@ pipeline {
            }
 	   stage ('deployment-to-tomcat') {
             steps {
-		    fileOperations([fileCopyOperation(excludes: 'target', flattenFiles: false, includes: 'target/*.war', targetLocation: '/opt/apache-tomcat/webapps/*.war')])
-               }
+		copyArtifacts filter: '**/*.war', fingerprintArtifacts: true, projectName: 'pipe-line-project', selector: latestSavedBuild(), target: '/opt/apache-tomcat/webapps/'	
+	    }
             }
            }
 }
