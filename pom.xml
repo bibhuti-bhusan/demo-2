@@ -32,11 +32,13 @@
     <distributionManagement>
     <snapshotRepository>
       <id>nexus-snapshots</id>
-      <url>http://172.29.240.236:8081/repository/Ericsson-snapshots/</url>
+      <name>Internal Snapshots</name>
+      <url>http://35.229.70.178:8081/repository/Ericsson-snapshots/</url>
     </snapshotRepository>
     <repository>
       <id>nexus-releases</id>
-      <url>http://172.29.240.236:8081/repository/maven-proxy-test/</url>
+      <name>Internal Releases</name>
+      <url>http://35.229.70.178:8081/repository/Ericsson-releases/</url>
     </repository>       
     </distributionManagement>
     <build>
