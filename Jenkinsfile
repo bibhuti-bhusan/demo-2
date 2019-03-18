@@ -39,7 +39,7 @@ pipeline {
            }
 	   stage ('deployment-to-tomcat') {
             steps {
-		    fileOperations([fileCopyOperation(excludes: '', flattenFiles: false, includes: 'target/*.war', targetLocation: '/opt/apache-tomcat/webapps/')])
+		    fileOperations([fileCopyOperation(excludes: 'target', flattenFiles: false, includes: 'target/*.war', targetLocation: '/opt/apache-tomcat/webapps/')])
                }
             }
            }
