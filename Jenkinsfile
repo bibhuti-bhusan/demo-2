@@ -39,9 +39,8 @@ pipeline {
            }
 	   stage ('deployment-to-tomcat') {
             steps {
-               sshagent(['tomcat-admin']) {
-                sh 'scp -o StrictHostKeyChecking=no  target/*.war root@10.142.0.4:/opt/apache-tomcat/webapps/'
-              }
+		    fileOperations([fileCopyOperation(excludes: '', flattenFiles: false, includes: 'target/*.war', targetLocation: '/opt/apache-tomcat/webapps/')])
+    update              }
             }
            }
 
